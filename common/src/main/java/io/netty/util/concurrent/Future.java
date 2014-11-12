@@ -89,6 +89,7 @@ public interface Future<V> extends java.util.concurrent.Future<V> {
     /**
      * Waits for this future until it is done, and rethrows the cause of the failure if this future
      * failed.
+     * This method would catch the InterruptedException and discard it.
      */
     Future<V> syncUninterruptibly();
 
